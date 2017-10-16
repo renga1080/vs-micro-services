@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: vs-user-service
+  cloud:
+    config:
+      enabled:  true
+      failFast: true
+      discovery:
+        enabled:  true
+        serviceId:  config-server
+      label:  ${vs.spring.cloud.config.label:develop}
+
+server:
+  port: ${PORT:0}
+
+### Eureka Server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:  http://${eureka.host:${HOST:localhost}}:${eureka.port:8761}${eureka.context:/eureka-server}/eureka/

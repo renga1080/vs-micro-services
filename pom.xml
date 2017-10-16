@@ -6,8 +6,14 @@
 	<groupId>com.ranga.vs.microservies</groupId>
 	<artifactId>vs-micro-services</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
 
+    <modules>
+        <module>vs-gateway-service</module>
+        <module>vs-user-service</module>
+        <module>vs-common</module>
+    </modules>
+
+    <packaging>pom</packaging>
 	<name>vs-micro-services</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -23,6 +29,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Dalston.SR4</spring-cloud.version>
+        <packaging.type>jar</packaging.type>
 	</properties>
 
 	<dependencies>
